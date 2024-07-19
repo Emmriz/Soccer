@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      backgroundImage: {
+        'custom-image': "url('assets/soccer-imagee.png')",
+      },
       colors:{
         "color-primary": "F8F0E3",
         "color-secondary": "#FFA500",
@@ -13,6 +17,7 @@ module.exports = {
         "color-ashe": "#B2BEB5",
         "color-grey": "#808080",
         "color-blue": "#0000FF",
+        "color-red": "#Ff0000"
 
       }
     },
