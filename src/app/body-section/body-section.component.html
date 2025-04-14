@@ -9,9 +9,25 @@
         .Live
       </h3>
     </div>
+    <div id="team" class="flex justify-between items-center text-center p-5" *ngIf="!loading && !error">
+      <div class="england">
+        <img class="rounded-full mx-auto" [src]="matchData.team1Flag" width="50" height="50" alt=""/>
+        <p class="mt-2 text-gray-700 text-md text-center">{{ matchData.team1Name }}</p>
+      </div>
+    
+      <h6 class="font-bold text-base align-middle justify-center">{{ matchData.team1Score }} : {{ matchData.team2Score }}</h6>
+    
+      <div class="argentina">
+        <img class="rounded-full mx-auto" [src]="matchData.team2Flag" width="50" height="50" alt=""/>
+        <p class="mt-2 text-gray-700 text-md text-center">{{ matchData.team2Name }}</p>
+      </div>
+    </div>
+    
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="error">{{ error }}</div>
+    
 
-
-    <div id="team" class="flex justify-between items-center text-center p-5">
+    <!-- <div id="team" class="flex justify-between items-center text-center p-5">
       <div class="england">
       <img class="rounded-full mx-auto" src="assets/england.jpg" width="50" height="50" alt=""/>
       <p class="mt-2 text-gray-700 text-md text-center">England</p>
@@ -23,7 +39,7 @@
       <img class="rounded-full mx-auto" src="/assets/Flag-Argentina.webp" width="50" height="50" alt=""/>
       <p class="mt-2 text-gray-700 text-md text-center">Argentina</p>
     </div>
-  </div>
+  </div> -->
 
     <div class="view flex justify-between items-center text-center p-5">
       <i class="bx bx-star p-2 bg-slate-100 px-5 py-3 rounded-md"></i>
